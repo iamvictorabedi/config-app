@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.4.0'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
+    id 'org.liquibase.gradle' version '2.0.4'
 }
 
 group = 'com.kyosk'
@@ -21,6 +22,8 @@ repositories {
 
 ext {
     set('springFoxSwagger2Version', '2.9.2')
+    set('mapStructVersion',  '1.4.1.Final')
+    set('commonsCollections4Version', '4.4')
 }
 
 
@@ -29,11 +32,18 @@ dependencies {
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.data:spring-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
     implementation("io.springfox:springfox-swagger-ui:${springFoxSwagger2Version}")
     implementation("io.springfox:springfox-swagger2:${springFoxSwagger2Version}")
+    implementation "org.mapstruct:mapstruct:${mapStructVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation "org.apache.commons:commons-collections4:${commonsCollections4Version}"
+    implementation "org.apache.commons:commons-lang3"
+    implementation "org.liquibase:liquibase-core"
 
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
