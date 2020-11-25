@@ -1,13 +1,18 @@
 package com.kyosk.config.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@ToString
+@EqualsAndHashCode
 public class Cpu {
     String enabled;
     String value;
+
+    public Cpu() {
+    }
 }

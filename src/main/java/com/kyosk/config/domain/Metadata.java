@@ -1,16 +1,21 @@
 package com.kyosk.config.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Contains Configuration metadata properties
  */
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@ToString
+@EqualsAndHashCode
 public class Metadata {
     Monitoring monitoring;
     Limit limits;
+
+    public Metadata() {
+    }
 }

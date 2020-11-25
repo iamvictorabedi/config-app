@@ -1,14 +1,20 @@
 package com.kyosk.config.service.dto;
 
 import com.kyosk.config.domain.Metadata;
-import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Setter
+@ToString
+@EqualsAndHashCode
 public class ConfigRequestDto {
     public String name;
     public Metadata metadata;
+
+    public ConfigRequestDto() {
+    }
 }
