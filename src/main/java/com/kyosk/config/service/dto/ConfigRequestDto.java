@@ -1,7 +1,6 @@
 package com.kyosk.config.service.dto;
 
 import com.kyosk.config.domain.Metadata;
-import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
