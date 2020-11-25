@@ -18,6 +18,8 @@ databaseChangeLog:
                   name: name
                   type: varchar(50)
                   remarks: Name to configration file
+                  constraints:
+                    unique: true
               - column:
                   name: metadata
                   type: text

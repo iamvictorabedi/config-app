@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ConfigRepository extends JpaRepository<Config, Long> {
+    Config findByName(String name);
+
+    void deleteByName(String name);
 }
