@@ -1,4 +1,4 @@
-# Kyosk Backend - Victor
+# Config App
 This application is build on spring java and packages in a public docker image 
 >docker pull iamvictorabedi/config-kyosk:latest
 ## Problem definition
