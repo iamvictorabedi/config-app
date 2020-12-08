@@ -1,0 +1,34 @@
+server:
+  port: 5000
+  shutdown: graceful
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: config
+  datasource:
+    url: jdbc:mysql://localhost:3306/config
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:db/changelog/config.yml
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /
+      path-mapping:
+        health: health
+        info: info
+  endpoint:
+    metrics:
+      enabled: true
