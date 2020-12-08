@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 202011242223
+      author: victor
+      changes:
+        - createTable:
+            tableName: config
+            remarks: Table to hold configration name and metadata configured by a user
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  remarks: Name to configration file
+                  constraints:
+                    unique: true
+              - column:
+                  name: metadata
+                  type: text
+                  remarks: Holds key value and pair of a configuration
+
